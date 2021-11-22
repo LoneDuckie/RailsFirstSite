@@ -1,0 +1,42 @@
+
+
+
+<table>
+  <tr>
+    <p>
+     <td><strong>First name:</strong></td>
+     <td><%= @friend.first_name %></td>
+    </p>
+  </tr>
+
+  <tr>
+    <p>
+      <td><strong>Last name:</strong></td>
+      <td><%= @friend.last_name %></td>
+    </p>
+  </tr>
+
+  <tr>
+    <p>
+      <td><strong>Birthday:</strong></td>
+      <td><%= @friend.birthday %></td>
+    </p>
+  </tr>
+
+  <tr>
+    <p>
+      <td><strong>Email:</strong></td>
+      <td><%= @friend.email %></td>
+    </p>
+  </tr>
+
+  <tr>
+    <p>
+      <td><strong>Phone:</strong></td>
+      <td><%= @friend.phone %></td>
+    </p>
+  </tr>
+</table>
+
+<%= link_to 'Edit', edit_friend_path(@friend), class:"btn btn-secondary" %>
+<%= link_to 'Back', friends_path, class:"btn btn-secondary" %>

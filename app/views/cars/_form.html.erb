@@ -1,0 +1,50 @@
+<%= form_with(model: car) do |form| %>
+  <% if car.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(car.errors.count, "error") %> prohibited this car from being saved:</h2>
+
+      <ul>
+        <% car.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field mb-3">
+    <%= form.label :make %>
+    <%= form.text_field :make, class:"form-control" %>
+  </div>
+
+  <div class="field mb-3">
+    <%= form.label :model %>
+    <%= form.text_field :model, class:"form-control" %>
+  </div>
+
+  <div class="field mb-3">
+    <%= form.label :year %>
+    <%= form.text_field :year, class:"form-control" %>
+  </div>
+
+  <div class="field mb-3">
+    <%= form.label :engine %>
+    <%= form.text_field :engine, class:"form-control" %>
+  </div>
+
+  <div class="field mb-3">
+    <%= form.label :drivetrain %>
+    <%= form.text_field :drivetrain, class:"form-control" %>
+  </div>
+
+  <!--
+  <div class="field mb-3">
+    <%= form.number_field :user_id, id: :car_user_id, class:"form-control", value:current_user.id, type: :hidden %>
+  </div>
+-->
+  
+  <div class="actions">
+    <%= form.submit class:"btn btn-secondary" %>
+  </div>
+
+
+<% end %>

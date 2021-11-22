@@ -1,0 +1,41 @@
+
+
+<table>
+  <tr>
+    <p>
+      <strong>Make:</strong>
+      <%= @car.make %>
+    </p>
+  </tr>
+
+  <tr>
+    <p>
+      <strong>Model:</strong>
+      <%= @car.model %>
+    </p>
+  </tr>
+
+  <tr>
+    <p>
+      <strong>Year:</strong>
+      <%= @car.year %>
+    </p>
+  </tr>
+
+  <tr>
+    <p>
+      <strong>Engine:</strong>
+      <%= @car.engine %>
+    </p>
+  </tr>
+
+  <tr>
+    <p>
+      <strong>Drivetrain:</strong>
+      <%= @car.drivetrain %>
+    </p>
+  </tr>
+</table>
+
+<%= link_to 'Edit', edit_car_path(@car), class:"btn btn-secondary" %>
+<%= link_to 'Back', cars_path, class:"btn btn-secondary" %>
