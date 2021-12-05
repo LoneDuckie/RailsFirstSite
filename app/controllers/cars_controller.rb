@@ -1,7 +1,7 @@
 class CarsController < ApplicationController
   before_action :set_car, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy, :show]
   # GET /cars or /cars.json
   def index
     @cars = Car.all
